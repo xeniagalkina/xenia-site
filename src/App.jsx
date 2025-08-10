@@ -52,10 +52,10 @@ export default function App() {
               <p className="text-sm text-neutral-500 mb-4">Previously at</p>
               <div className="flex flex-wrap items-center gap-x-10 gap-y-4 opacity-70">
                 [
+  { name: 'Baseline.AI', url: 'https://xeniagalkina.notion.site/Baseline-AI-2437d3b82c51802491b7d3194c14654d?source=copy_link' },
   { name: 'BenevolentAI', url: 'https://www.benevolent.com/' },
-  { name: 'Nuance Healthcare', url: 'https://www.nuance.com/en-ie/healthcare/provider-solutions/speech-recognition/dragon-medical-one.html' },
   { name: 'Civic Tech Lab', url: 'https://newsloom.io/' },
-  { name: 'Diabetes Cockpit', url: 'https://syntactiq.ai/' }
+  { name: 'Diabetes Cockpit', url: 'https://syntactiq.ai/' },
 ].map(({ name, url }) => (
   <a
     key={name}
