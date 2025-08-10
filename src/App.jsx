@@ -11,7 +11,7 @@ const CTA_LINK = 'https://calendly.com/xenia-galkina/intro-chat'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-neutral-900 text-neutral-100">
+    <div className="min-h-screen bg-white text-neutral-900">
       <header className="px-6 py-4 border-b border-neutral-200/70 sticky top-0 z-40 bg-white/80 backdrop-blur">
         <div className="mx-auto max-w-3xl flex items-center justify-between">
           <div className="flex items-center gap-2">
