@@ -5,7 +5,7 @@ import { Linkedin, Instagram, Mail } from 'lucide-react'
 const AVATAR = '/avatar.jpg'
 const NAME = 'Xenia Galkina'
 const TAGLINE = 'Product leader & AI tinkerer'
-const BIO = 'Built user-loved products at BigTech. Now helping teams ship faster and smarter.'
+const BIO = 'Built AI products for humans across life sciences, healthcare and robotics. Now shipping products for AI. Helping earlt stage startups to develop Product & AI Strategy'
 const CTA_LABEL = 'Book consulting'
 const CTA_LINK = 'https://calendly.com/xenia-galkina/intro-chat'
 
