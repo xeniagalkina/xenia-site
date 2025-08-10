@@ -51,9 +51,23 @@ export default function App() {
             <div className="mt-10 border-t border-neutral-200 pt-6">
               <p className="text-sm text-neutral-500 mb-4">Previously at</p>
               <div className="flex flex-wrap items-center gap-x-10 gap-y-4 opacity-70">
-                {['BenevolentAI','Nuance Healthcare','Civic Tech Lab','Diabetes Cockpit'].map((brand) => (
-                  <span key={brand} className="text-neutral-500 text-sm sm:text-base font-medium tracking-wide">{brand}</span>
-                ))}
+                [
+  { name: 'BenevolentAI', url: 'https://www.benevolent.com/' },
+  { name: 'Nuance Healthcare', url: 'https://www.nuance.com/en-ie/healthcare/provider-solutions/speech-recognition/dragon-medical-one.html' },
+  { name: 'Civic Tech Lab', url: 'https://newsloom.io/' },
+  { name: 'Diabetes Cockpit', url: 'https://syntactiq.ai/' }
+].map(({ name, url }) => (
+  <a
+    key={name}
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-neutral-500 text-sm sm:text-base font-medium tracking-wide hover:underline"
+  >
+    {name}
+  </a>
+))
+
               </div>
             </div>
           </div>
