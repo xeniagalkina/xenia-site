@@ -80,7 +80,7 @@ export default function App() {
               <p className="mt-2 text-neutral-600">Building Knowledge Infrastructure for AI Agents.</p>
             </div>
             <div>
-              <h3 className="font-semibold">Head of AI Products, Civic Tech Labs</h3>
+              <h3 className="font-semibold">Head of AI Products, Civic Tech Lab</h3>
               <p className="mt-2 text-neutral-600">Built up a product team from scratch and led developement from idea to public release. Launched Newsloom - AI Assistant for Media and Journalists.</p>
             </div>
             <div>
