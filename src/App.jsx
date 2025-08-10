@@ -66,7 +66,6 @@ export default function App() {
               'Building high-performing product teams',
               'Developing product and AI strategies',
               'Career coaching for PMs',
-              'Fundraising for startups'
             ].map((item) => (
               <li key={item} className="border-b border-neutral-200 pb-2">{item}</li>
             ))}
@@ -77,27 +76,27 @@ export default function App() {
           <h2 className="text-lg font-semibold text-neutral-500 tracking-widest mb-6">EXPERIENCE</h2>
           <div className="space-y-8">
             <div>
-              <h3 className="font-semibold">Founder & CEO, Optic</h3>
-              <p className="mt-2 text-neutral-600">Building AI-native biopharma. Raised $12M from Kleiner Perkins and Greylock. Trusted by Stanford, Puretech, Southern Research, Innoviva, UNC, and more.</p>
+              <h3 className="font-semibold">Founder & CPO, Baseline.AI</h3>
+              <p className="mt-2 text-neutral-600">Building Knowledge Infrastructure for AI Agents.</p>
             </div>
             <div>
-              <h3 className="font-semibold">Director of Product, Google</h3>
-              <p className="mt-2 text-neutral-600">Led an org of 200+ across PM, UX, and Engineering. Founding PM for Google’s VR/AR group. Launched Cardboard, Daydream, Tilt Brush, YouTube VR, and Stadia.</p>
+              <h3 className="font-semibold">Head of AI Products, Civic Tech Labs</h3>
+              <p className="mt-2 text-neutral-600">Built up a product team from scratch and led developement from idea to public release. Launched Newsloom - AI Assistant for Media and Journalists.</p>
             </div>
             <div>
-              <h3 className="font-semibold">Head of Mobile, YouTube</h3>
-              <p className="mt-2 text-neutral-600">Launched the YouTube app for iOS, Android, and mobile web. Negotiated key distribution deals, including with Apple. Scaled the product from 0 to 1B+ users.</p>
+              <h3 className="font-semibold">Senior Product Manager, TGW, Mobile Robotics</h3>
+              <p className="mt-2 text-neutral-600">Led Product Developement of Software for Autonomous Mobile Robots.</p>
             </div>
             <div>
-              <h3 className="font-semibold">Angel Investor & Advisor</h3>
-              <p className="mt-2 text-neutral-600">Backed Coda, Grammarly, PandaDoc, Titan, Reface, FlutterFlow, Chatfuel, DressX, and others.</p>
+              <h3 className="font-semibold">Senior Technical Product Manager, Benevolent.AI</h3>
+              <p className="mt-2 text-neutral-600">Leading technical teams to build knowlege foundations to speed up drug discovery.</p>
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-3xl mt-16 sm:mt-20 mb-16">
           <h2 className="text-lg font-semibold text-neutral-500 tracking-widest mb-6">COMMUNITY</h2>
-          <p className="text-neutral-600">Author of the @dobry blog. Co-founder of the Mesto.co online community and DobryDom co-living in San Francisco. Certified yoga teacher.</p>
+          <p className="text-neutral-600">Mentor for Product Managers.</p>
         </section>
 
         <footer className="py-10 text-center text-sm text-neutral-500 border-t border-neutral-200">
