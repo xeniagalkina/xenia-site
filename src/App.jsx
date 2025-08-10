@@ -51,7 +51,7 @@ export default function App() {
             <div className="mt-10 border-t border-neutral-200 pt-6">
               <p className="text-sm text-neutral-500 mb-4">Previously at</p>
               <div className="flex flex-wrap items-center gap-x-10 gap-y-4 opacity-70">
-                {['BenevoletAI','Nuance Healthcare','Civic Tech Lab','Diabetes Cockpit'].map((brand) => (
+                {['BenevolentAI','Nuance Healthcare','Civic Tech Lab','Diabetes Cockpit'].map((brand) => (
                   <span key={brand} className="text-neutral-500 text-sm sm:text-base font-medium tracking-wide">{brand}</span>
                 ))}
               </div>
@@ -88,15 +88,15 @@ export default function App() {
               <p className="mt-2 text-neutral-600">Led Product Developement of Software for Autonomous Mobile Robots.</p>
             </div>
             <div>
-              <h3 className="font-semibold">Senior Technical Product Manager, Benevolent.AI</h3>
-              <p className="mt-2 text-neutral-600">Leading technical teams to build knowlege foundations to speed up drug discovery.</p>
+              <h3 className="font-semibold">Senior Technical Product Manager, BenevolentAI</h3>
+              <p className="mt-2 text-neutral-600">Led technical teams to build knowledge foundations to speed up drug discovery.</p>
             </div>
           </div>
         </section>
 
         <section className="mx-auto max-w-3xl mt-16 sm:mt-20 mb-16">
           <h2 className="text-lg font-semibold text-neutral-500 tracking-widest mb-6">COMMUNITY</h2>
-          <p className="text-neutral-600">Mentor for Product Managers.</p>
+          <p className="text-neutral-600">Mentor for Product Managers and Teams.</p>
         </section>
 
         <footer className="py-10 text-center text-sm text-neutral-500 border-t border-neutral-200">
