@@ -5,7 +5,7 @@ import { Linkedin, Instagram, Mail } from 'lucide-react'
 const AVATAR = '/avatar.jpg'
 const NAME = 'Xenia Galkina'
 const TAGLINE = 'Product leader & AI tinkerer'
-const BIO = 'Built AI products for humans across life sciences, healthcare and robotics. Now shipping products for AI and helping early stage startups to develop Product & AI Strategy'
+const BIO = 'Built AI products for humans across life sciences, healthcare and robotics. Now shipping products for AI and helping early stage startups to develop Product & AI Strategy.'
 const CTA_LABEL = 'Book consulting'
 const CTA_LINK = 'https://calendly.com/xenia-galkina/intro-chat'
 
@@ -51,22 +51,22 @@ export default function App() {
             <div className="mt-10 border-t border-neutral-200 pt-6">
               <p className="text-sm text-neutral-500 mb-4">Previously at</p>
               <div className="flex flex-wrap items-center gap-x-10 gap-y-4 opacity-70">
-                [
-  { name: 'Baseline.AI', url: 'https://xeniagalkina.notion.site/Baseline-AI-2437d3b82c51802491b7d3194c14654d?source=copy_link' },
-  { name: 'BenevolentAI', url: 'https://www.benevolent.com/' },
-  { name: 'Civic Tech Lab', url: 'https://newsloom.io/' },
-  { name: 'Diabetes Cockpit', url: 'https://syntactiq.ai/' },
-].map(({ name, url }) => (
-  <a
-    key={name}
-    href={url}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="text-neutral-500 text-sm sm:text-base font-medium tracking-wide hover:underline"
-  >
-    {name}
-  </a>
-))
+                {[
+                 { name: 'Baseline.AI', url: 'https://xeniagalkina.notion.site/Baseline-AI-2437d3b82c51802491b7d3194c14654d?source=copy_link' },
+                 { name: 'BenevolentAI', url: 'https://www.benevolent.com/' },
+                 { name: 'Civic Tech Lab', url: 'https://newsloom.io/' },
+                 { name: 'Diabetes Cockpit', url: 'https://syntactiq.ai/' },
+                ].map(({ name, url }) => (
+                  <a
+                    key={name}
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-neutral-500 text-sm sm:text-base font-medium tracking-wide hover:underline"
+                 >
+                   {name}
+                 </a>
+               ))}
 
               </div>
             </div>
