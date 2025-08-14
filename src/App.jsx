@@ -49,7 +49,7 @@ export default function App() {
             </div>
 
             <div className="mt-10 border-t border-neutral-200 pt-6">
-              <p className="text-sm text-neutral-500 mb-4">Previously at</p>
+              <p className="text-sm text-neutral-500 mb-4">Build product at</p>
               <div className="flex flex-wrap items-center gap-x-10 gap-y-4 opacity-70">
                 {[
                  { name: 'Baseline.AI', url: 'https://xeniagalkina.notion.site/Baseline-AI-2437d3b82c51802491b7d3194c14654d?source=copy_link' },
