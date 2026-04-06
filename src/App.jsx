@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Instagram, Linkedin, Mail, Twitter } from 'lucide-react'
+import { ArrowRight, Instagram, Linkedin } from 'lucide-react'
 
 const AVATAR = '/avatar.jpg'
 const TODAY = new Date().toLocaleDateString('en-US', {
@@ -41,17 +41,23 @@ export default function App() {
             Xenia archive
           </a>
           <div className="flex items-center gap-3 text-stone-600">
-            <a href="#" aria-label="X" className="transition hover:text-cyan-700">
-              <Twitter className="h-4 w-4" />
-            </a>
-            <a href="#" aria-label="LinkedIn" className="transition hover:text-cyan-700">
+            <a
+              href="https://www.linkedin.com/in/xeniagalkina/"
+              aria-label="LinkedIn"
+              className="transition hover:text-cyan-700"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Linkedin className="h-4 w-4" />
             </a>
-            <a href="#" aria-label="Instagram" className="transition hover:text-cyan-700">
+            <a
+              href="https://www.instagram.com/xenia_vg/"
+              aria-label="Instagram"
+              className="transition hover:text-cyan-700"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Instagram className="h-4 w-4" />
-            </a>
-            <a href="#" aria-label="Email" className="transition hover:text-cyan-700">
-              <Mail className="h-4 w-4" />
             </a>
           </div>
         </div>
@@ -81,7 +87,6 @@ export default function App() {
             transition={{ duration: 0.5 }}
             className="text-center"
           >
-            <p className="text-[11px] uppercase tracking-[0.38em] text-cyan-700">Personal blog / essays / notes</p>
             <h1 className="mt-4 text-6xl font-semibold uppercase tracking-[-0.06em] text-stone-900 sm:text-7xl lg:text-[7.5rem]">
               Blog
             </h1>
@@ -92,11 +97,13 @@ export default function App() {
 
           <div className="mt-10">
             <div className="brutalist-card relative overflow-hidden p-6 sm:p-7">
-              <div className="absolute right-6 top-6 hidden h-24 w-24 border border-cyan-700/30 sm:block" />
+              <div className="absolute right-6 top-6 hidden items-center justify-center border border-cyan-700/30 px-4 py-3 text-[10px] uppercase tracking-[0.28em] text-cyan-700 sm:flex">
+                NO.001
+              </div>
               <div className="absolute left-[28%] top-[24%] hidden h-48 w-px bg-stone-900/10 lg:block" />
 
               <div className="flex items-center justify-between border-b border-stone-900/10 pb-3 text-[10px] uppercase tracking-[0.28em] text-stone-500">
-                <span>Featured entry</span>
+                <span>First one in</span>
                 <span>NO.021</span>
               </div>
 
@@ -107,14 +114,13 @@ export default function App() {
                     How to think about Artificial Intelligence?
                   </h2>
                   <p className="max-w-xl text-sm leading-7 text-stone-700">
-                    A field note on machine capability, interface taste, and why tools still need a strong human point
-                    of view.
+                    Open questions about consciousness, intelligence and what are we building ?
                   </p>
                   <a
                     href="/article/designing-for-humans"
                     className="inline-flex items-center gap-2 border border-stone-900/15 bg-white/45 px-4 py-3 text-[11px] uppercase tracking-[0.28em] text-stone-800 transition hover:border-cyan-700 hover:text-cyan-700"
                   >
-                    Open article
+                    Open
                     <ArrowRight className="h-4 w-4" />
                   </a>
                 </div>
@@ -148,7 +154,6 @@ export default function App() {
                 Next articles
               </h2>
             </div>
-            <p className="text-[10px] uppercase tracking-[0.28em] text-stone-500">Two placeholders for now</p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -208,13 +213,7 @@ export default function App() {
                     {post.title}
                   </h3>
                   <p className="mt-4 text-sm leading-6 text-stone-600">{post.description}</p>
-                  <a
-                    href="/article"
-                    className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-stone-700 transition hover:text-cyan-700"
-                  >
-                    Read article
-                    <ArrowRight className="h-4 w-4" />
-                  </a>
+                  <p className="mt-6 text-[11px] uppercase tracking-[0.28em] text-stone-500">Coming soon</p>
                 </div>
               </motion.article>
             ))}
