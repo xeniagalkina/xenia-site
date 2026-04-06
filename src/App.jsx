@@ -1,152 +1,219 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Linkedin, Mail } from 'lucide-react'
+import { ArrowRight, Mail } from 'lucide-react'
 
 const AVATAR = '/avatar.jpg'
-const NAME = 'Xenia Galkina'
-const TAGLINE = 'Product leader & AI tinkerer'
-const BIO = 'Built AI products for humans across life sciences, healthcare and robotics. Now shipping products for AI and helping early stage startups to develop Product & AI Strategy.'
-const CTA_LABEL = 'Book consulting'
-const CTA_LINK = 'https://calendly.com/xenia-galkina/intro-chat'
+const TODAY = new Date().toLocaleDateString('en-US', {
+  month: 'short',
+  day: 'numeric',
+  year: 'numeric',
+})
+
+const posts = [
+  {
+    id: 'NO.020',
+    category: 'Notes',
+    date: 'Mar 2026',
+    time: '6 min read',
+    title: 'Do we know what intelligence is?',
+    description: 'How diving into evolution of intelligence gave me new appreciation of fish.',
+    style: 'image',
+  },
+  {
+    id: 'NO.019',
+    category: 'Notes',
+    date: 'Feb 2026',
+    time: '5 min read',
+    title: 'The Body Problem',
+    description: 'What mushrooms teach us about machine consciousness.',
+    style: 'image-2',
+  },
+]
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-neutral-900 text-neutral-100">
-      <header className="px-6 py-4 border-b border-neutral-800 sticky top-0 z-40 bg-neutral-900/80 backdrop-blur">
-        <div className="mx-auto max-w-3xl flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <img src={AVATAR} alt={NAME + ' headshot'} className="h-8 w-8 rounded-full object-cover ring-1 ring-neutral-700" />
-            <span className="font-semibold tracking-tight">xeniagalkina</span>
-          </div>
-          <a href={CTA_LINK} className="text-sm rounded-full px-4 py-2 border border-neutral-700 hover:border-neutral-300 transition-colors">Contact</a>
+    <div className="min-h-screen bg-[#f3ecde] text-stone-900">
+      <div className="pointer-events-none fixed inset-0 brutalist-noise opacity-30" />
+
+      <header className="border-b border-stone-900/10">
+        <div className="mx-auto flex w-full max-w-[1500px] items-center justify-between px-5 py-4 sm:px-8">
+          <a href="#top" className="text-[11px] uppercase tracking-[0.34em] text-stone-700">
+            Xenia archive
+          </a>
+          <a
+            href="mailto:xeniagalkina.ai@gmail.com"
+            className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-stone-600 transition hover:text-cyan-700"
+          >
+            <Mail className="h-4 w-4" />
+            Contact
+          </a>
         </div>
       </header>
 
-      <main className="px-4">
-        <motion.section
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="mx-auto max-w-3xl"
-        >
-          <div className="mt-16 md:mt-24 rounded-3xl bg-neutral-800 border border-neutral-700 shadow p-6 sm:p-10">
-            <div className="flex flex-col sm:flex-row items-start gap-6">
-              <figure className="shrink-0">
-                <img src={AVATAR} alt={NAME + ' headshot'} className="h-28 w-28 sm:h-32 sm:w-32 rounded-full object-cover ring-1 ring-neutral-700" />
-              </figure>
-              <div className="flex-1">
-                <h1 className="text-4xl sm:text-5xl font-semibold leading-tight tracking-tight">{NAME}</h1>
-                <p className="mt-3 text-neutral-300 text-lg">{TAGLINE}</p>
-                <p className="mt-2 text-neutral-400">{BIO}</p>
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <a href={CTA_LINK} className="inline-flex items-center justify-center rounded-full px-5 py-3 text-neutral-900 bg-neutral-100 hover:bg-neutral-200 transition shadow-sm">{CTA_LABEL}</a>
-                  <div className="flex items-center gap-2 text-neutral-400">
-                    <a href="https://www.linkedin.com/in/xeniagalkina/" aria-label="LinkedIn" className="p-2 rounded-full border border-neutral-700 hover:border-neutral-300 transition"><Linkedin className="h-5 w-5" /></a>
-                    <a href="mailto:xeniagalkina.ai@gmail.com" aria-label="Email" className="p-2 rounded-full border border-neutral-700 hover:border-neutral-300 transition"><Mail className="h-5 w-5" /></a>
+      <main id="top" className="px-5 pb-16 pt-8 sm:px-8 sm:pt-12">
+        <section className="mx-auto w-full max-w-[1500px]">
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45 }}
+            className="mx-auto mb-12 flex max-w-3xl flex-col items-center text-center"
+          >
+            <div className="h-24 w-24 overflow-hidden rounded-full border border-stone-900/10 bg-white/50 p-1">
+              <img src={AVATAR} alt="Xenia Galkina" className="h-full w-full rounded-full object-cover" />
+            </div>
+            <p className="mt-6 text-[11px] uppercase tracking-[0.34em] text-cyan-700">About me</p>
+            <p className="mt-4 max-w-2xl text-sm leading-7 text-stone-700 sm:text-base">
+              I&apos;m Xenia. I&apos;m a founder building a product for AIs to use. I love space, hard sci-fi, and
+              occasionally obsess over deep questions. This is a digital ghost of what&apos;s happening in my brain.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-center"
+          >
+            <p className="text-[11px] uppercase tracking-[0.38em] text-cyan-700">Personal blog / essays / notes</p>
+            <h1 className="mt-4 text-6xl font-semibold uppercase tracking-[-0.06em] text-stone-900 sm:text-7xl lg:text-[7.5rem]">
+              Blog
+            </h1>
+            <p className="mx-auto mt-5 max-w-4xl text-sm leading-7 text-stone-700 sm:text-base">
+              A working archive. Notes on AI, intelligence, consciousness, and the ideas I keep returning to.
+            </p>
+          </motion.div>
+
+          <div className="mt-10">
+            <div className="brutalist-card relative overflow-hidden p-6 sm:p-7">
+              <div className="absolute right-6 top-6 hidden h-24 w-24 border border-cyan-700/30 sm:block" />
+              <div className="absolute bottom-8 left-8 hidden h-20 w-20 rounded-full border border-yellow-600/25 sm:block" />
+              <div className="absolute left-[28%] top-[24%] hidden h-48 w-px bg-stone-900/10 lg:block" />
+
+              <div className="flex items-center justify-between border-b border-stone-900/10 pb-3 text-[10px] uppercase tracking-[0.28em] text-stone-500">
+                <span>Featured entry</span>
+                <span>NO.021</span>
+              </div>
+
+              <div className="mt-8 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
+                <div className="space-y-5">
+                  <p className="text-[11px] uppercase tracking-[0.32em] text-cyan-700">AI / product / essay</p>
+                  <h2 className="max-w-2xl text-4xl uppercase leading-[0.96] tracking-[-0.06em] text-stone-900 sm:text-5xl">
+                    How to think about Artificial Intelligence?
+                  </h2>
+                  <p className="max-w-xl text-sm leading-7 text-stone-700">
+                    A field note on machine capability, interface taste, and why tools still need a strong human point
+                    of view.
+                  </p>
+                  <a
+                    href="/article/designing-for-humans"
+                    className="inline-flex items-center gap-2 border border-stone-900/15 bg-white/45 px-4 py-3 text-[11px] uppercase tracking-[0.28em] text-stone-800 transition hover:border-cyan-700 hover:text-cyan-700"
+                  >
+                    Open article
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+
+                <div className="poster-frame poster-image min-h-[320px] p-5">
+                  <img
+                    src="/featured-eye.png"
+                    alt="Surreal eye illustration for featured article"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                  <div className="poster-image-overlay" />
+                  <div className="poster-topline">
+                    <span>{TODAY}</span>
+                    <span>2-3 min read</span>
+                  </div>
+                  <div className="poster-copy">
+                    <span>Notes</span>
+                    <span>NO.019</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
 
-<<<<<<< Updated upstream
-            <div className="mt-10 border-t border-neutral-200 pt-6">
-              <p className="text-sm text-neutral-500 mb-4">I build products at</p>
-              <div className="flex flex-wrap items-center gap-x-10 gap-y-4 opacity-70">
-                {[
-                 { name: 'Baseline.AI', url: 'https://xeniagalkina.notion.site/Baseline-AI-2437d3b82c51802491b7d3194c14654d?source=copy_link' },
-                 { name: 'BenevolentAI', url: 'https://www.benevolent.com/' },
-                 { name: 'Civic Tech Lab', url: 'https://newsloom.io/' },
-                 { name: 'Diabetes Cockpit', url: 'https://syntactiq.ai/' },
-                ].map(({ name, url }) => (
+        <section className="mx-auto mt-8 w-full max-w-[1500px]">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.28em] text-stone-500">Upcoming</p>
+              <h2 className="mt-2 text-2xl uppercase tracking-[-0.05em] text-stone-900 sm:text-3xl">
+                Next articles
+              </h2>
+            </div>
+            <p className="text-[10px] uppercase tracking-[0.28em] text-stone-500">Two placeholders for now</p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2">
+            {posts.map((post, index) => (
+              <motion.article
+                key={post.id}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.45, delay: index * 0.04 }}
+                className="brutalist-card overflow-hidden"
+              >
+                <div className="flex items-center justify-between border-b border-stone-900/10 px-5 py-3 text-[10px] uppercase tracking-[0.28em] text-stone-500">
+                  <span>{post.category}</span>
+                  <span>{post.id}</span>
+                </div>
+
+                {post.style === 'image' || post.style === 'image-2' ? (
+                  <div className="poster-frame poster-image min-h-[290px] p-5">
+                    <img
+                      src={post.style === 'image' ? '/surreal-note.png' : '/body-problem.png'}
+                      alt={post.style === 'image' ? 'Surreal illustration for note preview' : 'Colorful surreal landscape for note preview'}
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                    <div className="poster-image-overlay" />
+                    <div className="poster-topline">
+                      <span>{post.date}</span>
+                      <span>{post.time}</span>
+                    </div>
+                    <div className="poster-copy poster-copy-small">
+                      <span>{post.category}</span>
+                      <span>{post.id}</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className={`poster-frame min-h-[290px] p-5 ${`poster-${post.style}`}`}>
+                    <div className="poster-topline">
+                      <span>{post.date}</span>
+                      <span>{post.time}</span>
+                    </div>
+                    <div className="poster-grid-box" />
+                    <div className="poster-shape poster-shape-a" />
+                    <div className="poster-shape poster-shape-b" />
+                    <div className="poster-curve" />
+                    <div className="poster-copy poster-copy-small">
+                      <span>{post.category}</span>
+                      <span>{post.id}</span>
+                    </div>
+                  </div>
+                )}
+
+                <div className="px-5 pb-5 pt-4">
+                  <p className="text-[10px] uppercase tracking-[0.28em] text-stone-500">
+                    {post.category} / {post.time}
+                  </p>
+                  <h3 className="mt-3 text-[1.7rem] uppercase leading-[1.02] tracking-[-0.05em] text-stone-900">
+                    {post.title}
+                  </h3>
+                  <p className="mt-4 text-sm leading-6 text-stone-600">{post.description}</p>
                   <a
-                    key={name}
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neutral-500 text-sm sm:text-base font-medium tracking-wide hover:underline"
-                 >
-                   {name}
-                 </a>
-               ))}
-
-=======
-            <div className="mt-10 border-t border-neutral-700 pt-6">
-              <p className="text-sm text-neutral-400 mb-4">Previously at</p>
-              <div className="flex flex-wrap items-center gap-x-10 gap-y-4 opacity-70">
-                {['BenevoletAI','Nuance Healthcare','Civic Tech Lab','Diabetes Cockpit'].map((brand) => (
-                  <span key={brand} className="text-neutral-400 text-sm sm:text-base font-medium tracking-wide">{brand}</span>
-                ))}
->>>>>>> Stashed changes
-              </div>
-            </div>
-          </div>
-        </motion.section>
-
-        <section className="mx-auto max-w-3xl mt-16 sm:mt-20">
-          <h2 className="text-lg font-semibold text-neutral-400 tracking-widest mb-6">WHAT I CAN HELP WITH</h2>
-          <ul className="space-y-4 text-lg">
-            {[
-              'Building high-performing product teams',
-              'Developing product and AI strategies',
-              'Career coaching for PMs',
-            ].map((item) => (
-              <li key={item} className="border-b border-neutral-800 pb-2">{item}</li>
+                    href="/article"
+                    className="mt-6 inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-stone-700 transition hover:text-cyan-700"
+                  >
+                    Read article
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
+                </div>
+              </motion.article>
             ))}
-          </ul>
-        </section>
-
-        <section className="mx-auto max-w-3xl mt-16 sm:mt-20">
-          <h2 className="text-lg font-semibold text-neutral-400 tracking-widest mb-6">EXPERIENCE</h2>
-          <div className="space-y-8">
-            <div>
-<<<<<<< Updated upstream
-              <h3 className="font-semibold">Founder & CPO, Baseline.AI</h3>
-              <p className="mt-2 text-neutral-600">Building Knowledge Infrastructure for AI Agents.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Head of AI Products, Civic Tech Lab</h3>
-              <p className="mt-2 text-neutral-600">Built up a product team from scratch and led developement from idea to public release. Launched Newsloom - AI Assistant for Media and Journalists.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Senior Product Manager, TGW, Mobile Robotics</h3>
-              <p className="mt-2 text-neutral-600">Led Product Developement of Software for Autonomous Mobile Robots.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Senior Technical Product Manager, BenevolentAI</h3>
-              <p className="mt-2 text-neutral-600">Led technical teams to build knowledge foundations to speed up drug discovery.</p>
-=======
-              <h3 className="font-semibold">Founder & CEO, Optic</h3>
-              <p className="mt-2 text-neutral-300">Building AI-native biopharma. Raised $12M from Kleiner Perkins and Greylock. Trusted by Stanford, Puretech, Southern Research, Innoviva, UNC, and more.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Director of Product, Google</h3>
-              <p className="mt-2 text-neutral-300">Led an org of 200+ across PM, UX, and Engineering. Founding PM for Google’s VR/AR group. Launched Cardboard, Daydream, Tilt Brush, YouTube VR, and Stadia.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Head of Mobile, YouTube</h3>
-              <p className="mt-2 text-neutral-300">Launched the YouTube app for iOS, Android, and mobile web. Negotiated key distribution deals, including with Apple. Scaled the product from 0 to 1B+ users.</p>
-            </div>
-            <div>
-              <h3 className="font-semibold">Angel Investor & Advisor</h3>
-              <p className="mt-2 text-neutral-300">Backed Coda, Grammarly, PandaDoc, Titan, Reface, FlutterFlow, Chatfuel, DressX, and others.</p>
->>>>>>> Stashed changes
-            </div>
           </div>
         </section>
-
-        <section className="mx-auto max-w-3xl mt-16 sm:mt-20 mb-16">
-<<<<<<< Updated upstream
-          <h2 className="text-lg font-semibold text-neutral-500 tracking-widest mb-6">COMMUNITY</h2>
-          <p className="text-neutral-600">Mentor for Product Managers and Teams.</p>
-=======
-          <h2 className="text-lg font-semibold text-neutral-400 tracking-widest mb-6">COMMUNITY</h2>
-          <p className="text-neutral-300">Author of the @dobry blog. Co-founder of the Mesto.co online community and DobryDom co-living in San Francisco. Certified yoga teacher.</p>
->>>>>>> Stashed changes
-        </section>
-
-        <footer className="py-10 text-center text-sm text-neutral-400 border-t border-neutral-800">
-          © {new Date().getFullYear()} {NAME}. All rights reserved.
-        </footer>
       </main>
     </div>
   )
