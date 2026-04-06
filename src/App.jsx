@@ -97,7 +97,7 @@ export default function App() {
 
           <div className="mt-10">
             <div className="brutalist-card relative overflow-hidden p-6 sm:p-7">
-              <div className="absolute right-6 top-6 hidden items-center justify-center border border-cyan-700/30 px-4 py-3 text-[10px] uppercase tracking-[0.28em] text-cyan-700 sm:flex">
+              <div className="absolute right-6 top-8 hidden items-center justify-center border border-cyan-700/30 bg-[#f3ecde]/90 px-4 py-3 text-[10px] uppercase tracking-[0.28em] text-cyan-700 sm:flex">
                 NO.001
               </div>
               <div className="absolute left-[28%] top-[24%] hidden h-48 w-px bg-stone-900/10 lg:block" />
