@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Mail } from 'lucide-react'
+import { ArrowRight, Instagram, Linkedin, Mail, Twitter } from 'lucide-react'
 
 const AVATAR = '/avatar.jpg'
 const TODAY = new Date().toLocaleDateString('en-US', {
@@ -11,7 +11,7 @@ const TODAY = new Date().toLocaleDateString('en-US', {
 
 const posts = [
   {
-    id: 'NO.020',
+    id: 'NO.002',
     category: 'Notes',
     date: 'Mar 2026',
     time: '6 min read',
@@ -20,7 +20,7 @@ const posts = [
     style: 'image',
   },
   {
-    id: 'NO.019',
+    id: 'NO.003',
     category: 'Notes',
     date: 'Feb 2026',
     time: '5 min read',
@@ -40,13 +40,20 @@ export default function App() {
           <a href="#top" className="text-[11px] uppercase tracking-[0.34em] text-stone-700">
             Xenia archive
           </a>
-          <a
-            href="mailto:xeniagalkina.ai@gmail.com"
-            className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.3em] text-stone-600 transition hover:text-cyan-700"
-          >
-            <Mail className="h-4 w-4" />
-            Contact
-          </a>
+          <div className="flex items-center gap-3 text-stone-600">
+            <a href="#" aria-label="X" className="transition hover:text-cyan-700">
+              <Twitter className="h-4 w-4" />
+            </a>
+            <a href="#" aria-label="LinkedIn" className="transition hover:text-cyan-700">
+              <Linkedin className="h-4 w-4" />
+            </a>
+            <a href="#" aria-label="Instagram" className="transition hover:text-cyan-700">
+              <Instagram className="h-4 w-4" />
+            </a>
+            <a href="#" aria-label="Email" className="transition hover:text-cyan-700">
+              <Mail className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </header>
 
@@ -86,7 +93,6 @@ export default function App() {
           <div className="mt-10">
             <div className="brutalist-card relative overflow-hidden p-6 sm:p-7">
               <div className="absolute right-6 top-6 hidden h-24 w-24 border border-cyan-700/30 sm:block" />
-              <div className="absolute bottom-8 left-8 hidden h-20 w-20 rounded-full border border-yellow-600/25 sm:block" />
               <div className="absolute left-[28%] top-[24%] hidden h-48 w-px bg-stone-900/10 lg:block" />
 
               <div className="flex items-center justify-between border-b border-stone-900/10 pb-3 text-[10px] uppercase tracking-[0.28em] text-stone-500">
@@ -126,7 +132,7 @@ export default function App() {
                   </div>
                   <div className="poster-copy">
                     <span>Notes</span>
-                    <span>NO.019</span>
+                    <span>NO.001</span>
                   </div>
                 </div>
               </div>
