@@ -102,14 +102,13 @@ export default function App() {
               </div>
               <div className="absolute left-[28%] top-[24%] hidden h-48 w-px bg-stone-900/10 lg:block" />
 
-              <div className="flex items-center justify-between border-b border-stone-900/10 pb-3 text-[10px] uppercase tracking-[0.28em] text-stone-500">
+              <div className="border-b border-stone-900/10 pb-3 text-[10px] uppercase tracking-[0.28em] text-stone-500">
                 <span>First one in</span>
-                <span>NO.021</span>
               </div>
 
               <div className="mt-8 grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
                 <div className="space-y-5">
-                  <p className="text-[11px] uppercase tracking-[0.32em] text-cyan-700">AI / product / essay</p>
+                  <p className="text-[11px] uppercase tracking-[0.32em] text-cyan-700">Notes / 3 min read</p>
                   <h2 className="max-w-2xl text-4xl uppercase leading-[0.96] tracking-[-0.06em] text-stone-900 sm:text-5xl">
                     How to think about Artificial Intelligence?
                   </h2>
@@ -171,11 +170,23 @@ export default function App() {
                   <span>{post.id}</span>
                 </div>
 
-                {post.style === 'image' || post.style === 'image-2' ? (
+                {post.style === 'image' || post.style === 'image-2' || post.style === 'featured-eye' ? (
                   <div className="poster-frame poster-image min-h-[290px] p-5">
                     <img
-                      src={post.style === 'image' ? '/surreal-note.png' : '/body-problem.png'}
-                      alt={post.style === 'image' ? 'Surreal illustration for note preview' : 'Colorful surreal landscape for note preview'}
+                      src={
+                        post.style === 'image'
+                          ? '/surreal-note.png'
+                          : post.style === 'image-2'
+                            ? '/body-problem.png'
+                            : '/featured-eye.png'
+                      }
+                      alt={
+                        post.style === 'image'
+                          ? 'Surreal illustration for note preview'
+                          : post.style === 'image-2'
+                            ? 'Colorful surreal landscape for note preview'
+                            : 'Surreal eye illustration for note preview'
+                      }
                       className="absolute inset-0 h-full w-full object-cover"
                     />
                     <div className="poster-image-overlay" />
